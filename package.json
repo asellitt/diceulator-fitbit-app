@@ -1,0 +1,25 @@
+{
+  "fitbit": {
+    "appUUID": "6cfc5683-d2ce-4d3c-8563-43113666ae16",
+    "appType": "app",
+    "appDisplayName": "Diceulator",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "#2196f3",
+    "requestedPermissions": [],
+    "buildTargets": [
+      "higgs",
+      "meson",
+      "gemini",
+      "mira"
+    ],
+    "i18n": {
+      "en": {
+        "name": "Diceulator"
+      }
+    },
+    "defaultLanguage": "en-US"
+  },
+  "devDependencies": {
+    "@fitbit/sdk": "~4.1.0"
+  }
+}

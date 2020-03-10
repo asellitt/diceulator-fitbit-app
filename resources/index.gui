@@ -1,0 +1,57 @@
+<svg class="background">
+  
+  <text id="equation" class="output" />
+  <text id="result" class="output" />
+  
+  <use id="7" class="button operand" href="#square-button" y="20%" x="0">
+    <set href="#text" attributeName="text-buffer" to="7" />
+  </use>
+  <use id="8" class="button operand" href="#square-button" y="20%" x="25%">
+    <set href="#text" attributeName="text-buffer" to="8" />
+  </use>
+  <use id="9" class="button operand" href="#square-button" y="20%" x="50%">
+    <set href="#text" attributeName="text-buffer" to="9" />
+  </use>
+  <use id="delete" class="button operation" href="#square-button" y="20%" x="75%">
+    <set href="#text" attributeName="text-buffer" to="DEL" />
+  </use>
+  
+  <use id="4" class="button operand" href="#square-button" y="40%" x="0">
+    <set href="#text" attributeName="text-buffer" to="4" />
+  </use>
+  <use id="5" class="button operand" href="#square-button" y="40%" x="25%">
+    <set href="#text" attributeName="text-buffer" to="5" />
+  </use>
+  <use id="6" class="button operand" href="#square-button" y="40%" x="50%">
+    <set href="#text" attributeName="text-buffer" to="6" />
+  </use>
+  <use id="plus" class="button operation" href="#square-button" y="40%" x="75%">
+    <set href="#text" attributeName="text-buffer" to="+" />
+  </use>
+  
+  <use id="1" class="button operand" href="#square-button" y="60%" x="0">
+    <set href="#text" attributeName="text-buffer" to="1" />
+  </use>
+  <use id="2" class="button operand" href="#square-button" y="60%" x="25%">
+    <set href="#text" attributeName="text-buffer" to="2" />
+  </use>
+  <use id="3" class="button operand" href="#square-button" y="60%" x="50%">
+    <set href="#text" attributeName="text-buffer" to="3" />
+  </use>
+  <use id="minus" class="button operation" href="#square-button" y="60%" x="75%">
+    <set href="#text" attributeName="text-buffer" to="-" />
+  </use>
+
+  <use id="clear" class="button operation" href="#square-button" y="80%" x="0" width="25%">
+    <set href="#text" attributeName="text-buffer" to="CLR" />
+  </use>
+  <use id="0" class="button operand" href="#square-button" y="80%" x="25%">
+    <set href="#text" attributeName="text-buffer" to="0" />
+  </use>
+  <use id="roll" class="button operation" href="#square-button" y="80%" x="50%" width="25%">
+    <set href="#text" attributeName="text-buffer" to="=" />
+  </use>
+  <use id="d" class="button operation" href="#square-button" y="80%" x="75%" width="25%">
+    <set href="#text" attributeName="text-buffer" to="d" />
+  </use>
+</svg>
