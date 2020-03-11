@@ -1,4 +1,5 @@
 import document from "document"
+import * as messaging from "messaging"
 import * as util from "../common/utils"
 
 const equationText = document.getElementById("equation")
@@ -32,3 +33,41 @@ document.getElementById("d10").onclick = (event) => { diceResultText.text = util
 document.getElementById("d00").onclick = (event) => { diceResultText.text = util.d(1, 100) }
 document.getElementById("d12").onclick = (event) => { diceResultText.text = util.d(1, 12) }
 document.getElementById("d20").onclick = (event) => { diceResultText.text = util.d(1, 20) }
+
+const getTileInfo = (index) => {
+  return {
+    type: "favouriteRollsPool",
+    name: rolls[index][0],
+    roll: rolls[index][1],
+    index: index,
+  }
+}
+const configureTile = (tile, info) => {
+  if (info.type == "favouriteRollsPool") {
+    if(info.index == 0) return tile.getElementById("heading").text = info.name
+    tile.getElementById("name").text = info.name
+    tile.getElementById("roll").text = info.roll
+    tile.getElementById("touch").onclick = (event) => {
+      equationText.text = info.roll
+      util.solveEquation(equationText, calculatorResultText)
+      document.getElementById("container").value = 1
+    }
+  }
+}
+
+const favouriteRollsList = document.getElementById("favouriteRolls")
+let rolls = [["Saved Rolls"]]
+favouriteRollsList.delegate = {
+  getTileInfo: getTileInfo,
+  configureTile: configureTile,
+}
+favouriteRollsList.length = rolls.length
+
+messaging.peerSocket.onmessage = event => {
+  if (event.data.key === "savedRolls" && event.data.newValue) {
+    const savedRolls = JSON.parse(event.data.newValue)
+    rolls = [["Saved Rolls"]]
+    savedRolls.forEach(roll => { rolls.push(roll["name"].split(",")) })
+    favouriteRollsList.length = rolls.length
+  }
+}

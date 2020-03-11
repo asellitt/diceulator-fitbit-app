@@ -87,11 +87,37 @@
       </use>
      </use>
 
-   <use id="favourites" href="#panoramaview-item">
-      <rect width="100%" height="100%" fill="blue" />
+    <use id="favourites" href="#panoramaview-item">
+      <defs>
+        <symbol id="rollItem" href="#tile-list-item" focusable="false" pointer-events="none" system-events="all" display="none">
+          <text id="heading" class="rollItem-heading"/>
+          <text id="name" class="rollItem-name"/>
+          <text id="roll" class="rollItem-roll"/>
+          <rect id="touch" pointer-events="all" x="0" y="0" width="100%" height="100%-2" opacity="0" />
+        </symbol>
+      </defs>
+
+      <use id="favouriteRolls" href="#tile-list">
+        <var id="virtual" value="1" />
+        <var id="separator-height-bottom" value="2" />
+
+        <use id="favouriteRollsPool" href="#tile-list-pool">
+          <use id="favouriteRollsPool[0]" href="#rollItem" class="tile-list-item" />
+          <use id="favouriteRollsPool[1]" href="#rollItem" class="tile-list-item" />
+          <use id="favouriteRollsPool[2]" href="#rollItem" class="tile-list-item" />
+          <use id="favouriteRollsPool[3]" href="#rollItem" class="tile-list-item" />
+          <use id="favouriteRollsPool[4]" href="#rollItem" class="tile-list-item" />
+          <use id="favouriteRollsPool[5]" href="#rollItem" class="tile-list-item" />
+          <use id="favouriteRollsPool[6]" href="#rollItem" class="tile-list-item" />
+          <use id="favouriteRollsPool[7]" href="#rollItem" class="tile-list-item" />
+          <use id="favouriteRollsPool[8]" href="#rollItem" class="tile-list-item" />
+          <use id="favouriteRollsPool[9]" href="#rollItem" class="tile-list-item" />
+        </use>
+      </use>
     </use>
 
     <use id="pagination-dots" href="#pagination-widget" y="4">
+      <use href="#pagination-dot" />
       <use href="#pagination-dot" />
       <use href="#pagination-dot" />
       <use href="#pagination-highlight-dot" />

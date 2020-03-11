@@ -48,3 +48,27 @@
   text-anchor: middle;
   text-length: 3;
 }
+
+.tile-list-item {
+  font-family: System-Regular;
+  fill: white;
+  height: 60;
+}
+
+.tile-list-item text {
+  text-length: 50;
+}
+
+.rollItem-heading {
+  font-family: System-Bold;
+}
+
+.rollItem-name {
+  y: 100%-30;
+  font-size: 30;
+}
+
+.rollItem-roll {
+  y: 100%-10;
+  font-size: 20;
+}
