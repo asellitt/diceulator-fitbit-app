@@ -6,5 +6,8 @@
     <link rel="stylesheet" href="/mnt/sysassets/widgets/dynamic_textarea.css"/>
     <link rel="import" href="/mnt/sysassets/widgets/dynamic_textarea.gui"/>
     <link rel="import" href="/mnt/sysassets/widgets/mixed_text_widget.gui"/>
+    <link rel="import" href="/mnt/sysassets/widgets/baseview_widget.gui" />
+    <link rel="import" href="/mnt/sysassets/widgets/panoramaview_widget.gui" />
+    <link rel="import" href="/mnt/sysassets/widgets/pagination_dots.gui" />
   </defs>
 </svg>

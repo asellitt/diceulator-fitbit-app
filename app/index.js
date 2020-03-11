@@ -1,44 +1,34 @@
 import document from "document"
 import * as util from "../common/utils"
 
-// const resultText = document.getElementById("result").getElementById("copy")
-
 const equationText = document.getElementById("equation")
-const resultText = document.getElementById("result")
-
-const oneButton = document.getElementById("1")
-const twoButton = document.getElementById("2")
-const threeButton = document.getElementById("3")
-const fourButton = document.getElementById("4")
-const fiveButton = document.getElementById("5")
-const sixButton = document.getElementById("6")
-const sevenButton = document.getElementById("7")
-const eightButton = document.getElementById("8")
-const nindeButton = document.getElementById("9")
-const zeroButton = document.getElementById("0")
-const dButton = document.getElementById("d")
-const rollButton = document.getElementById("roll")
-const plusButton = document.getElementById("plus")
-const minusButton = document.getElementById("minus")
-const deleteButton = document.getElementById("delete")
-const clearButton = document.getElementById("clear")
-
-oneButton.onactivate = (event) => { util.buildEquation(1, equationText) }
-twoButton.onactivate = (event) => { util.buildEquation(2, equationText) }
-threeButton.onactivate = (event) => { util.buildEquation(3, equationText) }
-fourButton.onactivate = (event) => { util.buildEquation(4, equationText) }
-fiveButton.onactivate = (event) => { util.buildEquation(5, equationText) }
-sixButton.onactivate = (event) => { util.buildEquation(6, equationText) }
-sevenButton.onactivate = (event) => { util.buildEquation(7, equationText) }
-eightButton.onactivate = (event) => { util.buildEquation(8, equationText) }
-nindeButton.onactivate = (event) => { util.buildEquation(9, equationText) }
-zeroButton.onactivate = (event) => { util.buildEquation(0, equationText) }
-dButton.onactivate = (event) => { util.buildEquation('d', equationText) }
-plusButton.onactivate = (event) => { util.buildEquation('+', equationText) }
-minusButton.onactivate = (event) => { util.buildEquation('-', equationText) }
-deleteButton.onactivate = (event) => { util.buildEquation('del', equationText) }
-rollButton.onactivate = (event) => { util.solveEquation(equationText, resultText) }
-clearButton.onactivate = (event) => { 
+const calculatorResultText = document.getElementById("calculatorResult")
+document.getElementById("1").onactivate = (event) => { util.buildEquation(1, equationText) }
+document.getElementById("2").onactivate = (event) => { util.buildEquation(2, equationText) }
+document.getElementById("3").onactivate = (event) => { util.buildEquation(3, equationText) }
+document.getElementById("4").onactivate = (event) => { util.buildEquation(4, equationText) }
+document.getElementById("5").onactivate = (event) => { util.buildEquation(5, equationText) }
+document.getElementById("6").onactivate = (event) => { util.buildEquation(6, equationText) }
+document.getElementById("7").onactivate = (event) => { util.buildEquation(7, equationText) }
+document.getElementById("8").onactivate = (event) => { util.buildEquation(8, equationText) }
+document.getElementById("9").onactivate = (event) => { util.buildEquation(9, equationText) }
+document.getElementById("0").onactivate = (event) => { util.buildEquation(0, equationText) }
+document.getElementById("d").onactivate = (event) => { util.buildEquation('d', equationText) }
+document.getElementById("plus").onactivate = (event) => { util.buildEquation('+', equationText) }
+document.getElementById("minus").onactivate = (event) => { util.buildEquation('-', equationText) }
+document.getElementById("delete").onactivate = (event) => { util.buildEquation('del', equationText) }
+document.getElementById("roll").onactivate = (event) => { util.solveEquation(equationText, calculatorResultText) }
+document.getElementById("clear").onactivate = (event) => {
   equationText.text = ''
-  resultText.text = ''
+  calculatorResultText.text = ''
 }
+
+const diceResultText = document.getElementById("diceResult")
+document.getElementById("d2").onactivate = (event) => { diceResultText.text = util.d(1, 2) }
+document.getElementById("d4").onactivate = (event) => { diceResultText.text = util.d(1, 4) }
+document.getElementById("d6").onactivate = (event) => { diceResultText.text = util.d(1, 6) }
+document.getElementById("d8").onactivate = (event) => { diceResultText.text = util.d(1, 8) }
+document.getElementById("d10").onactivate = (event) => { diceResultText.text = util.d(1, 10) }
+document.getElementById("d00").onactivate = (event) => { diceResultText.text = util.d(1, 100) }
+document.getElementById("d12").onactivate = (event) => { diceResultText.text = util.d(1, 12) }
+document.getElementById("d20").onactivate = (event) => { diceResultText.text = util.d(1, 20) }
