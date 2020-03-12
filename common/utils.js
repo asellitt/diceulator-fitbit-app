@@ -98,5 +98,5 @@ export function buildEquation(value, equationText) {
 export function solveEquation(equationText, resultText) {
   const equation = parseEquation(equationText.text)
   const evaluation = evaluateEquation(equation)
-  resultText.text = evaluation
+  resultText.text = evaluation || 0
 }
